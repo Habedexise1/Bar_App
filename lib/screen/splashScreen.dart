@@ -33,9 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MyHomePage(
-                      title: '',
-                    ),
+                    builder: (context) => MyHomePage(),
                   ),
                 );
               },
