@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screen/Tabbar.dart';
 import 'screen/home.dart';
 import 'screen/splashScreen.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: CustomTabBar(),
     );
   }
 }
