@@ -1,3 +1,4 @@
+import 'package:bar_app/screen/cart.dart';
 import 'package:bar_app/screen/home.dart';
 import 'package:flutter/material.dart';
 
@@ -41,6 +42,7 @@ class _CustomTabBarState extends State<CustomTabBar>
             Tab(icon: Icon(Icons.people))
           ],
         ),
+
         // actions: <Widget>[
         //   IconButton(
         //     icon: const Icon(Icons.search),
