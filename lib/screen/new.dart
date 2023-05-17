@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bar_app/widget/lastorder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -26,6 +27,7 @@ class _homePageState extends State<homePage> {
               color: Colors.black,
             ),
           ),
+          Spacer(),
           IconButton(
             onPressed: () {},
             icon: Icon(
@@ -109,7 +111,7 @@ class _homePageState extends State<homePage> {
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Text(
-                                  '#1000',
+                                  '£ 12.0',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15),
@@ -143,33 +145,25 @@ class _homePageState extends State<homePage> {
                 SizedBox(
                   height: 20,
                 ),
-                Row(
-                  children: [
-                    Container(
-                      height: 200,
-                      width: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color.fromARGB(255, 255, 192, 169)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'images/4.png',
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                            Text('Rotai Pink', style: TextStyle(),),
-                          ],
-                        ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      lastOrder(),
+                      SizedBox(
+                        width: 20,
                       ),
-                    ),
-                  ],
-                )
+                      lastOrder(),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      lastOrder(),
+                    ],
+                  ),
+                ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );
