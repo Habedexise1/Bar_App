@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bar_app/const.dart';
 import 'package:bar_app/widget/lastorder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -17,6 +18,7 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -66,10 +68,10 @@ class _homePageState extends State<homePage> {
                 ),
                 GestureDetector(
                   onDoubleTap: () {
-            //          Navigator.push(
-            //   context,
-            //   MaterialPageRoute(builder: (context) => ()),
-            // );
+                    //          Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => ()),
+                    // );
                   },
                   child: Container(
                     width: double.infinity,
@@ -158,15 +160,39 @@ class _homePageState extends State<homePage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      lastOrder(),
+                      CustomProductCard(
+                        imagePath: 'images/4.png',
+                        productName: 'Rotai Pink',
+                        price: '£11.0',
+                        onPressed: () {
+                          // Implement the logic for the "Add" button
+                          // Add your custom functionality here
+                        },
+                      ),
                       SizedBox(
                         width: 20,
                       ),
-                      lastOrder(),
+                      CustomProductCard(
+                        imagePath: 'images/4.png',
+                        productName: 'Rotai Pink',
+                        price: '£11.0',
+                        onPressed: () {
+                          // Implement the logic for the "Add" button
+                          // Add your custom functionality here
+                        },
+                      ),
                       SizedBox(
                         width: 20,
                       ),
-                      lastOrder(),
+                      CustomProductCard(
+                        imagePath: 'images/4.png',
+                        productName: 'Rotai Pink',
+                        price: '£11.0',
+                        onPressed: () {
+                          // Implement the logic for the "Add" button
+                          // Add your custom functionality here
+                        },
+                      ),
                     ],
                   ),
                 ),
